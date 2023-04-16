@@ -1,17 +1,14 @@
 * {
   box-sizing: border-box;
 }
-
 :root {
   --background-color: rgb(24, 24, 24);
 }
-
-html, #root, body, .App {
+html, #root, body ,.App {
   background-color: var(--background-color);
   height: 100%;
   color: white;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,6 +19,7 @@ html, #root, body, .App {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -51,41 +49,45 @@ button {
   font-size: 1.2rem;
   border: 0;
   border-radius: 7.5px;
+
   background-color: #61dafb;
   color: #282c34;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    background-color: #1acdff;
+    cursor: pointer;
+    transform: scale(1.08, 1.08);
+  }
 }
-button:hover {
-  background-color: #1acdff;
-  cursor: pointer;
-  transform: scale(1.08, 1.08);
-}
-
 table {
   width: 70%;
   font-size: 1.5rem;
+
+  tr {
+    td {
+      width: 30%;
+    }
+    td:last-of-type {
+      padding: 20px;
+      input {
+        background-color: #fff;
+        margin: auto;
+        font: inherit;
+        color: black;
+        &[type=checkbox] {
+          width: 1.15em;
+          height: 1.15em;
+        }
+        &[type=number] {
+          width: 5rem;
+        }
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        
+        display: grid;
+        place-content: center;
+      }
+    }
+  }
 }
-table tr td {
-  width: 30%;
-}
-table tr td:last-of-type {
-  padding: 20px;
-}
-table tr td:last-of-type input {
-  background-color: #fff;
-  margin: auto;
-  font: inherit;
-  color: black;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-  display: grid;
-  place-content: center;
-}
-table tr td:last-of-type input[type=checkbox] {
-  width: 1.15em;
-  height: 1.15em;
-}
-table tr td:last-of-type input[type=number] {
-  width: 5rem;
-}/*# sourceMappingURL=App.css.map */
